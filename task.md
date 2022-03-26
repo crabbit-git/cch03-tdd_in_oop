@@ -51,3 +51,4 @@ Use the error messages to guide you! When you're finished you should have 6 pass
 ## Extension Question
 
 How would you update the diagram to accomodate a list of actors for a Movie? 
+# I would just add something like `cast: List` to the top box (attributes) for the Movie class in the diagram.
