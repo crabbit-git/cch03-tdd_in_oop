@@ -13,13 +13,13 @@ class TestProfile(unittest.TestCase):
         self.profile_1 = Profile("harrisonF", "myP@assword")
 
     # Test a Profile can add a favourite Movie
-    def profile_can_add_fav(self):
+    def test_profile_can_add_fav(self):
         self.assertEqual(0, len(self.profile_1.favourites))
         self.profile_1.add_favourite(self.movie_1)
         self.assertEqual([self.movie_1], self.profile_1.favourites)
 
     # Test a Profile can remove a given Movie from favourites
-    def profile_can_remove_fav(self):
+    def test_profile_can_remove_fav(self):
         self.assertEqual(0, len(self.profile_1.favourites))
         self.profile_1.add_favourite(self.movie_1)
         self.profile_1.add_favourite(self.movie_2)
@@ -27,7 +27,7 @@ class TestProfile(unittest.TestCase):
         self.assertEqual([self.movie_2], self.profile_1.favourites)
 
     # Test a Profile can return a list of Favourites
-    def profile_returns_favs(self):
+    def test_profile_returns_favs(self):
         if self.profile_1.get_favourites() != None:
             self.assertEqual(0, len(self.profile_1.get_favourites()))
             self.profile_1.add_favourite(self.movie_1)
