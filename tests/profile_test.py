@@ -14,22 +14,22 @@ class TestProfile(unittest.TestCase):
 
     # Test a Profile can add a favourite Movie
     def profile_can_add_fav(self):
-        self.assertEqual(0, len(self.favourites))
-        self.profile.add_favourite(self.movie_1)
-        self.assertEqual([self.movie_1], self.favourites)
+        self.assertEqual(0, len(self.profile_1.favourites))
+        self.profile_1.add_favourite(self.movie_1)
+        self.assertEqual([self.movie_1], self.profile_1.favourites)
 
     # Test a Profile can remove a given Movie from favourites
     def profile_can_remove_fav(self):
-        self.assertEqual(0, len(self.favourites))
-        self.profile.add_favourite(self.movie_1)
-        self.profile.add_favourite(self.movie_2)
-        self.profile.remove_favourite(self.movie_1)
-        self.assertEqual([self.movie_2], self.favourites)
+        self.assertEqual(0, len(self.profile_1.favourites))
+        self.profile_1.add_favourite(self.movie_1)
+        self.profile_1.add_favourite(self.movie_2)
+        self.profile_1.remove_favourite(self.movie_1)
+        self.assertEqual([self.movie_2], self.profile_1.favourites)
 
     # Test a Profile can return a list of Favourites
     def profile_returns_favs(self):
-        if self.profile.get_favourites() != None:
-            self.assertEqual(0, len(self.profile.get_favourites()))
-            self.profile.add_favourite(self.movie_1)
-            self.profile.add_favourite(self.movie_2)
-            self.assertEqual(2, len(self.profile.get_favourites())))
+        if self.profile_1.get_favourites() != None:
+            self.assertEqual(0, len(self.profile_1.get_favourites()))
+            self.profile_1.add_favourite(self.movie_1)
+            self.profile_1.add_favourite(self.movie_2)
+            self.assertEqual(2, len(self.profile_1.get_favourites()))
